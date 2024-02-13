@@ -7,7 +7,7 @@ function App() {
   const [enlistedBots, setEnlistedBots] = useState([]);
 // fetch data when the component mounts
 useEffect(() => {
-  fetch('http://localhost:3000/bots')
+  fetch('http://localhost:8001/bots')
   .then(response => response.json())
   .then((data) => {setBots(data)});
 
@@ -23,7 +23,7 @@ useEffect(() => {
 
   const dischargeBot = async (botId) => {
     try {
-      await fetch(`http://localhost:3000/bots/${botId}`, {
+      await fetch(`http://localhost:8001/bots/${botId}`, {
         method: 'DELETE'
       });
       setEnlistedBots(enlistedBots.filter((b) => b.id !== botId));
