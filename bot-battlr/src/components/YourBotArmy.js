@@ -1,4 +1,3 @@
-// YourBotArmy.js
 import React from 'react';
 import Bot from './Bot';
 
