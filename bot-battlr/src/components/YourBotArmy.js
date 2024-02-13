@@ -1,18 +1,17 @@
 import React from 'react';
 import Bot from './Bot';
 
-function YourBotArmy({ army, releaseBot, dischargeBot }) {
+function YourBotArmy({ enlistedBots, releaseBot, dischargeBot }) {
   return (
     <div>
       <h2>Your Bot Army</h2>
-      <div className="your-bot-army">
-        {army.map(bot => (
+      <div >
+        {enlistedBots.map((bot) => (
           <Bot
             key={bot.id}
             bot={bot}
-            onRelease={() => releaseBot(bot)}
-            onDischarge={() => dischargeBot(bot.id)}
-            isArmyBot
+            releaseBot={() => releaseBot(bot)}
+            dischargeBot={() => dischargeBot(bot.id)}
           />
         ))}
       </div>

@@ -1,24 +1,14 @@
 import React from 'react';
 
-function Bot({ bot, isArmyBot, enlistBot, releaseBot, dischargeBot }) {
-  const enlist = () => {
-    if (!isArmyBot) {
-      enlistBot(bot);
-    } else {
-      releaseBot(bot);
-    }
-  };
-
-  const discharge = () => {
-    dischargeBot(bot);
-  };
+function Bot({ bot, enlistBot, releaseBot, dischargeBot }) {
  
   return (
     <div className="bot">
-      <h2>{bot.name}</h2>
-      <img src={bot.avatar_url} alt={bot.name} />
-      <button onClick={enlist}>{isArmyBot ? 'Release' : 'Enlist'}</button>
-      {isArmyBot && <button onClick={discharge}>x</button>}
+      <h1>{bot.name}</h1>
+      <img src={bot.avatar_url} alt={ `${bot.name}`} />
+      <button onClick={()=>enlistBot(bot)}> enlist Bot </button>
+      <button onClick={()=>releaseBot(bot)}> Release Bot</button>
+      <button onClick={()=>dischargeBot(bot.id)} > Discharge Bot </button>
     </div>
   );
 }
