@@ -1,13 +1,68 @@
+/* index.css */
+
+/* Global styles */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Main container */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading style */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Bot card style */
+.bot {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.bot h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.bot img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.bot button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bot button:hover {
+  background-color: #0056b3;
+}
+
+/* Bot collection container */
+.bot-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Your bot army container */
+.your-bot-army {
+  margin-top: 40px;
 }
